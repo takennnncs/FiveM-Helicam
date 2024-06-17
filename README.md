@@ -1,15 +1,12 @@
-# 🚁FiveM Helicam script
+🚁FiveM ESX/QBCire Helicam skript
 
-## ⭐Credits
-takenncss
-
-## 📗Installation Guide
-1. Clone the repository or download the latest version
+📗Installation Info
+1. Download the latest version
 2. Put in the `/resource` folder
 3. Start in the `server.cfg`
 
-## ⌨️Keyboard
-| Functionality  | Hotkeys |
+⌨️ KeyBinds
+| Functions  | Hotkeys |
 | ------------- | ------------- |
 | Toogle Helicam | E |
 | Toogle Vision | G |
