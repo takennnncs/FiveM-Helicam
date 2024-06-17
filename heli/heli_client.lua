@@ -1,10 +1,3 @@
--- FiveM Heli Cam by mraes, version 1.3 (2017-06-12)
--- Modified by rjross2013 (2017-06-23)
--- Further modified by Loque (2017-08-15) with credits to the following for tips gleaned from their scripts: Guadmaz's Simple Police Searchlight, devilkkw's Speed Camera, nynjardin's Simple Outlaw Alert and IllidanS4's FiveM Entity Iterators.
-
----=========================
---- Config				====
----=========================
 local fov_max = 80.0
 local fov_min = 5.0 -- max zoom level (smaller fov is more zoom)
 local zoomspeed = 3.0 -- camera zoom speed
@@ -23,8 +16,7 @@ local radiusdown_key = 21 -- control id to decrease spotlight radius. Default: I
 local maxtargetdistance = 700 -- max distance at which target lock is maintained
 local brightness = 1.0 -- default spotlight brightness
 local spotradius = 4.0 -- default manual spotlight radius
-local speed_measure = "Km/h" -- default unit to measure vehicle speed but can be changed to "MPH". Use either exact string, "Km/h" or "MPH", or else functions break.
-
+local speed_measure = "Km/h" -- "Km/h" or "MPH"
 heli = {
 "polmav",
 }
@@ -33,19 +25,19 @@ heli = {
 local target_vehicle = nil
 local manual_spotlight = false
 local tracking spotlight = false
-local vehicle_display = 0 -- 0 is default full vehicle info display with speed/model/plate, 1 is model/plate, 2 turns off display
+local vehicle_display = 0 
 local helicam = false
 local fov = (fov_max+fov_min)*0.5
-local vision_state = 0 -- 0 is normal, 1 is nightmode, 2 is thermal vision
+local vision_state = 0 
 
-Citizen.CreateThread(function() -- Register ped decorators used to pass some variables from heli pilot to other players (variable settings: 1=false, 2=true)
+Citizen.CreateThread(function() 
 	while true do
 	Citizen.Wait(0)
 		if NetworkIsSessionStarted() then
-			DecorRegister("SpotvectorX", 3) -- For direction of manual spotlight
+			DecorRegister("SpotvectorX", 3) 
 			DecorRegister("SpotvectorY", 3)
 			DecorRegister("SpotvectorZ", 3)
-			DecorRegister("Target", 3) -- Backup method of target ID
+			DecorRegister("Target", 3) 
 			return
 		end
 	end
