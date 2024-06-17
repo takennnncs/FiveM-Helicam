@@ -1,7 +1,3 @@
--- FiveM Heli Cam by mraes, Version 1.3 (2017-06-12)
--- Modified by rjross2013 (2017-06-23)
--- Further modified by Loque (2017-08-15)
-
 RegisterServerEvent('heli:forward.spotlight')
 AddEventHandler('heli:forward.spotlight', function(state)
 	local serverID = source
@@ -61,3 +57,5 @@ AddEventHandler('heli:radius.down', function()
 	local serverID = source
 	TriggerClientEvent('heli:radius.down', -1, serverID)
 end)
+
+-- Registed Commands --
