@@ -1,5 +1,5 @@
-🚁FiveM ESX/QBCire Helicam skript
-
+🚁FiveM ESX/QBCore Helicam skript
+--
 📗Installation Info
 1. Download the latest version
 2. Put in the `/resource` folder
